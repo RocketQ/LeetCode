@@ -31,6 +31,10 @@ public class String_reverse {
         return res;
     }
 
+    /**
+     * Функция последовательного добавления двух массивов в один
+     * @param s
+     */
     public void reverseString2(char[] s) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
@@ -67,6 +71,9 @@ public class String_reverse {
         }
     }
 
+    /**
+     * Функция для определения скользящего среднего
+     */
      void movingAverage(int n, float[] mas,int K) {
         float counter = 0;
         float avg;

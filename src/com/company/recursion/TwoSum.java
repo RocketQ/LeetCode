@@ -13,7 +13,6 @@ public class TwoSum {
         }
         int found = s.nextInt();
         foundSum(found, mas);
-      //  System.out.println(-56 + (-32));
     }
 
     static void foundSum(int x, int[] mas) {
@@ -28,11 +27,7 @@ public class TwoSum {
                     }
                 }
             }
-
-
-        //String result = (r) ? indexes[1] +" "+ indexes[0]:"None";
         System.out.println((r) ? indexes[1] + " " + indexes[0] : "None");
-      //  System.out.println(indexes[1] +" "+ indexes[0]);
     }
 }
 

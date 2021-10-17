@@ -1,7 +1,9 @@
 package com.company.recursion;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class TwoSum {
     public static void main(String[] args) {
@@ -12,7 +14,7 @@ public class TwoSum {
             mas[i] = s.nextInt();
         }
         int found = s.nextInt();
-        foundSum(found, mas);
+        foundSumTwo(mas,found);
     }
 
     static void foundSum(int x, int[] mas) {
@@ -29,6 +31,40 @@ public class TwoSum {
             }
         System.out.println((r) ? indexes[1] + " " + indexes[0] : "None");
     }
+
+    /**
+     * Функция для нахождения K
+     * @param mas входной массив
+     * @param K число, которое нужно найти в массиве(m[i]+m[k]) = K
+     */
+    static void foundSumTwo(int[] mas, int K){
+        boolean found = false;
+        int lt = 0;
+        int rt = mas.length-1;
+
+        while (lt != rt) {
+            int cursum = mas[lt] + mas[rt];
+            if(cursum<K) {
+                lt++;
+            }
+            else if(cursum>K){
+                rt--;
+            }
+            else {
+                System.out.println(mas[lt] +" " + mas[rt]);
+                found = true;
+                break;
+            }
+        }
+        if(!found){
+            System.out.println("None");
+        }
+    }
+
+    static void arrayTwoSum(int x, int[] mas) {
+
+    }
+
 }
 
 
